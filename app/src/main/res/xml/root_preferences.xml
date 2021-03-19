@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/setting_cat_controller">
+
+        <SwitchPreferenceCompat
+            app:key="enable"
+            app:title="@string/setting_proxy_switch" />
+
+        <Preference
+            app:key="profile"
+            app:title="@string/setting_profile"
+            app:summary="Profile 1" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/setting_cat_settings">
+
+        <CheckBoxPreference
+            android:key="setting"
+            app:title="@string/setting_auto_connect"
+            app:summary="@string/setting_auto_setting_summary" />
+
+        <Preference
+            app:key="ip"
+            app:title="@string/setting_host"
+            app:summary="127.0.0.1" />
+
+        <Preference
+            app:key="port"
+            app:title="@string/setting_port"
+            app:summary="80" />
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/type_entries"
+            app:entryValues="@array/reply_values"
+            app:key="type"
+            app:title="@string/setting_proxy_type"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            app:key="auto_connect"
+            app:summaryOff="@string/setting_proxy_not_available"
+            app:summaryOn="@string/setting_proxy_available"
+            app:title="@string/setting_auto_connect" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
